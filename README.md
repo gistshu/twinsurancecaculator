@@ -1,20 +1,56 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 114 勞健保試算系統 (Taiwan Labor & Health Insurance Calculator 2025)
 
-This contains everything you need to run your app locally.
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-19-61dafb.svg)
+![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38b2ac.svg)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1L5HFK8CsfErF12pjx_XcfqVdh7qr6vL8
+一款針對台灣 **114 年度 (2025 年)** 勞工保險、全民健康保險及勞工退休金新制設計的專業試算工具。提供直觀的介面，幫助雇主與勞工快速估算每月薪資成本與實領金額。
 
-## Run Locally
+## 🌟 核心功能
 
-**Prerequisites:**  Node.js
+- **精準試算**：自動對應 114 年度最新投保分級表（勞保最低 $28,590）。
+- **三合一計算**：同時計算勞保、健保、勞退（雇主提撥及個人自提）。
+- **動態級距設定**：支援手動輸入或大量貼上更新投保分級表與費率，因應未來法規變動。
+- **數據視覺化**：透過圖表分析薪資結構與雇主額外負擔成本。
+- **紀錄儲存**：可將計算結果儲存至歷史紀錄或模擬存檔至雲端試算表。
+- **極致體驗**：基於 Tailwind CSS 的現代化響應式設計，支援手機與桌面端。
 
+## 🛠 關鍵技術
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **前端框架**：React 19 (TypeScript)
+- **樣式處理**：Tailwind CSS
+- **圖表組件**：Recharts
+- **圖示庫**：Lucide React
+- **模組管理**：原生 ES Modules (via esm.sh)
+
+## 📖 使用說明
+
+1. **基本試算**：在左側「薪資設定」輸入月薪總額、眷屬人數及勞退自提比例，右側將即時顯示計算結果。
+2. **存檔紀錄**：點擊「儲存至 Drive」可將目前計算結果加入下方歷史紀錄中。
+3. **更新級距**：
+   - 點擊右上角「齒輪圖示」開啟設定。
+   - 在「費率參數」分頁可修改基本費率。
+   - 在「分級表更新」分頁可直接貼上由 Excel 或網頁複製的數字級距（支援逗號、空白或換行分隔）。
+
+## 📂 專案結構
+
+```text
+.
+├── App.tsx                # 主要應用程式邏輯與介面
+├── index.tsx              # React 進入點
+├── constants.ts           # 114 年度預設費率與級距
+├── types.ts               # TypeScript 介面定義
+├── services/
+│   └── insuranceCalculations.ts  # 核心計算邏輯
+├── metadata.json          # 專案元數據
+└── index.html             # HTML 模板
+```
+
+## ⚖️ 免責聲明
+
+本系統計算結果僅供參考，實際扣繳金額應以勞工保險局、中央健康保險署及雇主發放之薪資單為準。
+
+## 📄 授權協議
+
+本專案採用 [MIT License](LICENSE) 授權。

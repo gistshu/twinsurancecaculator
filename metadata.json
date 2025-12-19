@@ -1,0 +1,7 @@
+{
+  "name": "114 Labor & Health Insurance Calculator",
+  "description": "A professional calculator for Taiwan 2025 (Year 114) Labor Insurance, Health Insurance, and Pension, with simulated Google Drive sync.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

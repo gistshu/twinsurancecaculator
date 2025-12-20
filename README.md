@@ -18,7 +18,7 @@ aistudio.google.com
 2. 請加上級距及金額設定的功能，未來可以將新的級距及金額上傳或是貼上後更新
 3. 產生github用的readme.md
 
-## 佈署 Deploy
+## 佈署 Deploy [Demo URL](https://twinsurancecaculator.gistshu.workers.dev)
 Github page有時會無法呈現正確的頁面，所以可以使用[cloudflare page](https://pages.cloudflare.com)來佈署。
 主要加上wrangler.json檔案，內容如下，這樣build時就不會出錯。
 {

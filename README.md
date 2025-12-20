@@ -6,7 +6,7 @@
 ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38b2ac.svg)
 
 一款針對台灣 **114 年度 (2025 年)** 勞工保險、全民健康保險及勞工退休金新制設計的專業試算工具。提供直觀的介面，幫助雇主與勞工快速估算每月薪資成本與實領金額。
-試算檔案來源使用[ＮＫＵＳＴ 114年勞健保試算表(https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ohr.nkust.edu.tw/word/114_%25E5%258B%259E%25E5%2581%25A5%25E4%25BF%259D%25E8%25A9%25A6%25E7%25AE%2597%25E8%25A1%25A8.xlsx&ved=2ahUKEwjA0q-b5suRAxV9QPUHHcizDn8QFnoECBwQAQ&usg=AOvVaw0uiul5VQkktfUjzTDLokZ9)
+試算檔案來源使用[NKUST 114年勞健保試算表(https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ohr.nkust.edu.tw/word/114_%25E5%258B%259E%25E5%2581%25A5%25E4%25BF%259D%25E8%25A9%25A6%25E7%25AE%2597%25E8%25A1%25A8.xlsx&ved=2ahUKEwjA0q-b5suRAxV9QPUHHcizDn8QFnoECBwQAQ&usg=AOvVaw0uiul5VQkktfUjzTDLokZ9)
 
 ## AI 工具
 aistudio.google.com
@@ -17,6 +17,20 @@ aistudio.google.com
 1. 請將google driver裡的114_勞健保試算表做成可以線上計算的網頁系統，並可以儲存計算結果在google driver裡
 2. 請加上級距及金額設定的功能，未來可以將新的級距及金額上傳或是貼上後更新
 3. 產生github用的readme.md
+
+## 佈署 Deploy
+Github page有時會無法呈現正確的頁面，所以可以使用[cloudflare page](https://pages.cloudflare.com)來佈署。
+主要加上wrangler.json檔案，內容如下，這樣build時就不會出錯。
+{
+  "name": "twinsurancecaculator",
+  "compatibility_date": "2025-12-19",
+  "assets": {
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
    
 ## 🌟 核心功能
 
